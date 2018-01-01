@@ -5,7 +5,6 @@ class Header extends React.Component {
     return (
       <div>
         <p>{this.props.title}</p>
-        <p>{this.props.obj.young ? 'yes' : 'no'}</p>
       </div>
     )
   }
