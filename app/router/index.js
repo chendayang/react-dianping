@@ -4,7 +4,7 @@ import React from 'react'
 import Index from '../containers'
 import Home from '../containers/Home'
 import City from '../containers/City'
-import User from '../containers/User'
+import UserRouter from './UserRouter'
 import Search from '../containers/Search'
 import Detail from '../containers/Detail'
 import NotFound from '../containers/404'
@@ -15,7 +15,7 @@ const RouteMap = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/city" component={City} />
-        <Route exact path="/user" component={User} />
+        <Route path="/user" component={UserRouter} />
         <Route exact path="/search/:type(/:keyword)" component={Search} />
         <Route exact path="/detail/:id" component={Detail} />
         <Route path="*" component={NotFound} />
