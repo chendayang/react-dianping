@@ -1,7 +1,8 @@
 import React from 'react'
 import {render} from 'react-dom'
 
-import './static/css/common.less'
+import './static/css/index.styl'
+
 import App from './containers'
 import {Provider} from 'react-redux'
 import configureStore from './store/configureStore'

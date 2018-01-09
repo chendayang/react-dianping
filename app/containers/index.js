@@ -14,9 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Header title="hello world" />
         <RouteMap />
-        <p>footer</p>
       </div>
     )
   }

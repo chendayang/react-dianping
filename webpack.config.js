@@ -17,9 +17,9 @@ module.exports = {
     loaders: [
       {test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel'},
       {
-        test: /\.less$/,
+        test: /\.styl$/,
         exclude: /node_modules/,
-        loader: 'style!css!postcss!less'
+        loader: 'style!css!postcss!stylus'
       },
       {test: /\.css$/, exclude: /node_modules/, loader: 'style!css!postcss'},
       {test: /\.(png|gif|jpg|jpeg|bmp)$/i, loader: 'url-loader?limit=5000'}, // 限制大小5kb
