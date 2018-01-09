@@ -1,31 +1,26 @@
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import {HashRouter as Router, Route, Link, Switch} from 'react-router-dom'
 import React from 'react'
 
+import Index from '../containers'
 import Home from '../containers/Home'
-import List from '../containers/List'
+import City from '../containers/City'
+import User from '../containers/User'
+import Search from '../containers/Search'
 import Detail from '../containers/Detail'
-import NotFound from '../containers/NotFound'
+import NotFound from '../containers/404'
 
 const RouteMap = () => (
-  <Router>
-    <div>
-      <ul>
-        <li>
-          <Link to="/index">Home</Link>
-        </li>
-        <li>
-          <Link to="/list">List</Link>
-        </li>
-        <li>
-          <Link to="/detail">Detail</Link>
-        </li>
-      </ul>
-      <hr />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/index" component={Home} />
-      <Route exact path="/list" component={List} />
-      <Route exact path="/detail" component={Detail} />
-    </div>
-  </Router>
+  <div className="layout">
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/city" component={City} />
+        <Route exact path="/user" component={User} />
+        <Route exact path="/search/:type(/:keyword)" component={Search} />
+        <Route exact path="/detail/:id" component={Detail} />
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </Router>
+  </div>
 )
 export default RouteMap
