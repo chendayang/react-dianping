@@ -1,6 +1,5 @@
 import React from 'react'
 import RouteMap from '../router'
-import Header from '../components/Header/Header'
 import LocalStore from '../util/localStore'
 import {CITYNAME} from '../config/localStoreKey'
 import {bindActionCreators} from 'redux'
