@@ -11,7 +11,7 @@ class HomeAd extends React.Component {
     return (
       <div>
         <h2>超值特惠</h2>
-        <div>
+        <div style={{border:"1px dashed green"}}>
           {data.map((item, index) => {
             return (
               <div key={index}>

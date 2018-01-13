@@ -11,7 +11,6 @@ class Ad extends React.Component {
   render() {
     return (
       <div>
-        abc
         {this.state.data.length ? (
           <HomeAd data={this.state.data} />
         ) : (
