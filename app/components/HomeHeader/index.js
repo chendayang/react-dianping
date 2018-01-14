@@ -1,16 +1,22 @@
 import React from 'react'
 import './index.styl'
-import {Link} from 'react-router-dom'
+import SearchInput from '../SearchInput'
+import {Link, withRouter} from 'react-router-dom'
+
 class HomeHeader extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      keyword: ''
+    }
+    this.enterHandle = this.enterHandle.bind(this)
   }
   render() {
     return (
       <div id="home-header" className="clear-fix">
         <div className="home-header-left float-left">
           <Link to="/city">
-            <span style={{color:'#fff'}}>
+            <span style={{color: '#fff'}}>
               {this.props.cityName}
               <i className="icon-angle-down" />
             </span>
@@ -22,11 +28,15 @@ class HomeHeader extends React.Component {
         <div className="home-header-middle">
           <div className="search-container">
             <i className="icon-search" />
-            <input type="text" placeholder="请输入关键字" />
+            <SearchInput value="" enterHandle={this.enterHandle} />
           </div>
         </div>
       </div>
     )
   }
+
+  enterHandle(value) {
+    this.props.history.push('/search/all/' + encodeURIComponent(value))
+  }
 }
-export default HomeHeader
+export default withRouter(HomeHeader)

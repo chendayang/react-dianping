@@ -16,7 +16,8 @@ const RouteMap = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/city" component={City} />
         <Route path="/user" component={UserRouter} />
-        <Route exact path="/search/:type(/:keyword)" component={Search} />
+        <Route exact path="/search/:type" component={Search} />
+        <Route exact path="/search/:type/:keyword" component={Search} />
         <Route exact path="/detail/:id" component={Detail} />
         <Route path="*" component={NotFound} />
       </Switch>
