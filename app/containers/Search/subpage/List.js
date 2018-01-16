@@ -37,15 +37,15 @@ class SearchList extends React.Component {
   componentDidMount() {
     this.loadFirstPageData()
   }
-  componentDidUpdate(prevProps, prevState) {
-    console.log('update')
-    const category = this.props.category
-    const keyword = this.props.keyword || ''
-    if (keyword === prevProps.keyword && category === prevProps.category) {
-      return
-    }
-    this.setState(initialState)
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   console.log('update')
+  //   const category = this.props.category
+  //   const keyword = this.props.keyword || ''
+  //   if (keyword === prevProps.keyword && category === prevProps.category) {
+  //     return
+  //   }
+  //   this.setState(initialState)
+  // }
   loadFirstPageData() {
     const cityName = this.props.cityName
     const category = this.props.category
