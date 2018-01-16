@@ -4,6 +4,7 @@ import React from 'react'
 import Index from '../containers'
 import Home from '../containers/Home'
 import City from '../containers/City'
+import Login from '../containers/Login'
 import UserRouter from './UserRouter'
 import Search from '../containers/Search'
 import Detail from '../containers/Detail'
@@ -14,10 +15,10 @@ const RouteMap = () => (
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/login/:router?" component={Login} />
         <Route exact path="/city" component={City} />
         <Route path="/user" component={UserRouter} />
-        <Route exact path="/search/:type" component={Search} />
-        <Route exact path="/search/:type/:keyword" component={Search} />
+        <Route exact path="/search/:type/:keyword?" component={Search} />
         <Route exact path="/detail/:id" component={Detail} />
         <Route path="*" component={NotFound} />
       </Switch>

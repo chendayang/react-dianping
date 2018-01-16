@@ -38,13 +38,15 @@ class SearchList extends React.Component {
     this.loadFirstPageData()
   }
   // componentDidUpdate(prevProps, prevState) {
-  //   console.log('update')
-  //   const category = this.props.category
-  //   const keyword = this.props.keyword || ''
-  //   if (keyword === prevProps.keyword && category === prevProps.category) {
-  //     return
-  //   }
-  //   this.setState(initialState)
+    // console.log('update')
+    // const category = this.props.category
+    // const keyword = this.props.keyword || ''
+    // console.log('category:', category)
+    // if (keyword === prevProps.keyword && category === prevProps.category) {
+    //   return
+    // }
+    // this.setState(initialState)
+    // this.loadFirstPageData()
   // }
   loadFirstPageData() {
     const cityName = this.props.cityName
