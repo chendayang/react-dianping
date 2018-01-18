@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
+import {withRouter} from 'react-router-dom'
 import Header from '../../components/Header'
 import * as userInfoActionsFromOtherFile from '../../actions/userInfo'
 import LoginComponent from '../../components/Login'
@@ -46,8 +47,9 @@ class Login extends React.Component {
     actions.update(userInfo)
     const params = this.props.match.params
     const router = params.router
+    console.log('router:', router)
     if (router) {
-      this.props.history.push(router)
+      this.props.history.push('/' + decodeURIComponent(router))
     } else {
       this.goUserPage()
     }
@@ -66,4 +68,4 @@ function mapDispatchToProps(dispatch) {
     userInfoActions: bindActionCreators(userInfoActionsFromOtherFile, dispatch)
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login))
