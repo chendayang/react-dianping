@@ -7,7 +7,6 @@ class HomeAd extends React.Component {
   }
   render() {
     const data = this.props.data
-    console.log('data:', data)
     return (
       <div>
         <h2>超值特惠</h2>

@@ -46,7 +46,6 @@ class Buy extends React.Component {
     if (!loginFlag) {
       return
     }
-    console.log('buy')
     this.props.history.push('/user')
   }
   storeHandle() {
@@ -68,7 +67,6 @@ class Buy extends React.Component {
   loginCheck() {
     const id = this.props.id
     const userInfo = this.props.userInfo
-    console.log('info:', userInfo)
     if (!userInfo.username) {
       this.props.history.push('/login/' + encodeURIComponent('detail/' + id))
       return false

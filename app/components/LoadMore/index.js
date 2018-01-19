@@ -23,7 +23,6 @@ class LoadMore extends React.Component {
   componentDidMount() {
     const loadMoreFn = this.props.loadMoreFn
     const wrapper = this.refs.wrapper
-    console.log('wrapper:', wrapper)
     let timeoutId
     function callback() {
       const top = wrapper.getBoundingClientRect().top

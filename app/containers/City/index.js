@@ -30,7 +30,6 @@ class City extends React.Component {
     if (newCity == null) {
       return
     }
-    console.log('newCity:', newCity)
     const userInfo = this.props.userInfo
     userInfo.cityName = newCity
     this.props.userInfoActions.update(userInfo)

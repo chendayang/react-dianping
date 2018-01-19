@@ -42,7 +42,6 @@ class List extends React.Component {
     this.resultHandle(result)
   }
   loadMoreData() {
-    console.log('loadmore')
     this.setState({
       isLoadingMore: true
     })

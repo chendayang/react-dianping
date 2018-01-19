@@ -4,7 +4,6 @@ import Star from '../Star'
 class DetailInfo extends React.Component {
   render() {
     var data = this.props.info
-    console.log('data:', data)
     return (
       <div id="detail-info-container">
         <div className="info-container clear-fix">
